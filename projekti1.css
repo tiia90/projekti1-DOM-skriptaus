@@ -1,0 +1,141 @@
+{
+  box-sizing: border-box;
+}
+
+/* marginaalit ja täytöt luettelosta */
+ul {
+  margin: 20px;
+  padding: 20px;
+}
+
+/* tyyliä listaukseen */
+ul li {
+  cursor: pointer;
+  position: relative;
+  padding: 12px 10px 12px 40px;
+  background: pink;
+  font-size: 24px;
+  font-family: Brush Script MT;
+  transition: 0.2s;
+   border-radius: 15px;
+   border-style: groove;
+
+  /* tee luettelokohteet valitsemattomiksi */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Määritä kaikki parittomat eli jokatoinen luettelokohdat eri väreille (seepra-raidat) */
+ul li:nth-child(odd) {
+  background: lightgrey;
+}
+
+
+
+/* Kun napsautat, lisää taustaväri ja korosta teksti */
+ul li.checked {
+  background: black;
+  color: white;
+  text-decoration: line-through;
+}
+
+/* tehty merkintä ja tyylit siihen */
+ul li.checked::before {
+  content: '';
+  position: absolute;
+  border-color: white;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+}
+
+/*sulku napille tyyliä*/
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 12px 16px 12px 16px;
+}
+
+
+
+/* yläosan ja otsikon tyyli */
+.header {
+  background-color: pink;
+  padding: 30px 40px;
+  color: white;
+  text-align: center;
+  font-family: Brush Script MT;
+  font-size: 30px;
+}
+
+/* otsikon jälkeen*/
+.header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+/* säädöt kirjoita kentälle ja lisää painikkeelle*/
+input {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  width: 75%;
+  padding: 10px;
+  float: left;
+  font-size: 16px;
+}
+
+/* Lisää nappulan tyyli, reunat 3d näyttää enemmän napilta */
+.addBtn {
+  padding: 15px;
+
+  background: mistyrose;
+  color: black;
+  float: center;
+  text-align: center;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-style: outset;
+}
+
+/* ala nappien tyyli samanlaiseks keskenään, näihin ei kursivointia */
+.nappi{
+ padding: 5px;
+
+  background: mistyrose;
+  color: black;
+  float: center;
+  text-align: center;
+  font-size: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-style: outset;
+  
+	
+	
+}
+
+/*footerille tyyliä*/
+footer{
+  text-align: center;
+  padding: 3px;
+  background-color: pink;
+  color: white;
+  margin-top: 20px;
+}
+
+/*palaa tähän ja säädä. kesken*/
+.storage{
+	float: center;
+}
+	

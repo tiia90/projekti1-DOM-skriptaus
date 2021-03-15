@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>projekti</title>
+<script src="projekti1.js"></script>
+
+
+<LINK rel="stylesheet"
+         type="text/css" 
+         href="projekti1.css">
+		 <script type="text/javascript" src="projekti1.js"></script>
+</head>
+
+<body>
+
+
+<LINK rel="stylesheet"
+         type="text/css" 
+         href="projekti1.css">
+<div id="myDIV" class="header">
+  <h2 id="id1">My to do list</h2>
+  <input type="text" id="myInput"  placeholder="Kirjoita tähän...">
+  <span onclick="newElement()" class="addBtn">Lisää</span>
+ 
+</div>
+
+<ul id="myUL">
+  <li>Siivoa</li>
+  <li class="checked">tee essee</li>
+  <li>vie koira ulos</li>
+  <li>soita mummolle</li>
+  <li>käy kaupassa</li>
+  <li>valmista ruokaa</li>
+</ul>
+<div>
+
+<button onclick="yourFunction()" class="nappi">Kuinka monta tehtävää yhteensä</button>
+<p id="demo"></p>
+<button onclick="myFunction()" class="nappi" >Poista kaikki</button>
+</div>
+<div id="säilytys">
+<button onclick="storage()" class="nappi">Kaikki tehtävät</button>
+</div>
+
+
+
+<script src="projekti1.js"></script>
+
+<script>
+function myFunction() {
+  var list = document.getElementById("myUL");
+  while (list.hasChildNodes()) {
+    list.removeChild(list.firstChild);
+  }
+}
+</script>
+<script>
+function yourFunction() {
+  var c = document.getElementById("myUL").childElementCount;
+  document.getElementById("demo").innerHTML = c;
+}
+</script>
+
+
+</body>
+<footer>
+<p>Tekijä: Tiia Raveala<br>
+  <a href="mailto:tiia.raveala@student">tiia.raveala@student.laurea.fi</a></p>
+</footer>
+
+</html>
